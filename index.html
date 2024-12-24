@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образовательные материалы</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <h1>Учебный Центр</h1>
+        <nav>
+            <ul>
+                <li><a href="#articles">Статьи</a></li>
+                <li><a href="#presentations">Презентации</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Раздел со статьями -->
+        <section id="articles">
+            <h2>Последние статьи</h2>
+            <div class="presentation-list">
+                <div class="presentation-item">
+                    <h3>Понимание технологий</h3>
+                    <p>Эта статья расскажет о базовых принципах современных технологий...</p>
+                    <button class="read-more-btn" onclick="openModal('modal1')">Читать</button>
+                </div>
+                <div class="presentation-item">
+                    <h3>Революция интернета</h3>
+                    <p>Исследование того, как интернет изменил нашу жизнь...</p>
+                    <button class="read-more-btn" onclick="openModal('modal2')">Читать</button>
+                </div>
+                <div class="presentation-item">
+                    <h3>Будущее искусственного интеллекта</h3>
+                    <p>Искусственный интеллект становится всё более важной частью нашей жизни...</p>
+                    <button class="read-more-btn" onclick="openModal('modal3')">Читать</button>
+                </div>
+            </div>
+
+            <!-- Модальные окна -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+                    <h3>Понимание технологий</h3>
+                    <p>Эта статья подробно объясняет, что такое искусственный интеллект, блокчейн, IoT и другие ключевые технологии...</p>
+                </div>
+            </div>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+                    <h3>Революция интернета</h3>
+                    <p>Интернет изменил не только способы общения, но и саму структуру общества. Мы исследуем важнейшие моменты этой революции...</p>
+                </div>
+            </div>
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+                    <h3>Будущее искусственного интеллекта</h3>
+                    <p>Искусственный интеллект меняет способы работы, исследования и повседневную жизнь. В статье рассказывается о его применении в различных сферах...</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Раздел с презентациями -->
+        <section id="presentations">
+            <h2>Учебные презентации</h2>
+            <div class="presentation-list">
+                <div class="presentation-item">
+                    <h3>Топ 5 антивирусных программ</h3>
+                    <a href="dop/antivirus.html" class="read-more-btn">Читать</a>
+                </div>
+                <div class="presentation-item">
+                    <h3>Топ 5 планшетов</h3>
+                    <a href="dop/planshet.html" class="read-more-btn">Читать</a>
+                </div>
+                <div class="presentation-item">
+                    <h3>Топ 5 браузеров</h3>
+                    <a href="dop/browser.html" class="read-more-btn">Читать</a>
+                </div>
+                <div class="presentation-item">
+                    <h3>Топ 5 социальных сетей</h3>
+                    <a href="dop/social.html" class="read-more-btn">Читать</a>
+                </div>
+                <div class="presentation-item">
+                    <h3>Топ 5 умных колонок</h3>
+                    <a href="dop/boombox.html" class="read-more-btn">Читать</a>
+                </div>
+                <div class="presentation-item">
+                    <h3>Топ 5 умных часов</h3>
+                    <a href="dop/watch.html" class="read-more-btn">Читать</a>
+                </div>
+                <div class="presentation-item">
+                    <h3>Топ 5 самых опасных компьютерных вирусов</h3>
+                    <a href="dop/virus.html" class="read-more-btn">Читать</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел с галереей -->
+        <section id="gallery">
+            <h2>Галерея изображений</h2>
+            
+            <!-- Кнопки для категорий -->
+            <div class="button-container">
+                <button class="gallery-btn" id="btn1">Антивирусы</button>
+                <button class="gallery-btn" id="btn2">Браузеры</button>
+                <button class="gallery-btn" id="btn3">Соц.Сети</button>
+                <button class="gallery-btn" id="btn4">Планшеты</button>
+                <button class="gallery-btn" id="btn5">Умные Колонки</button>
+                <button class="gallery-btn" id="btn6">Умные Часы</button>
+                <button class="gallery-btn" id="btn7">Вирусы</button>
+            </div>
+        
+            <!-- Модальное окно для отображения изображений -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="close-btn" class="close-btn">&times;</span>
+                    <div class="image-container" id="image-container"></div>
+                    <button id="back-btn" class="back-btn">Назад</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Учебный Центр. Все права защищены.</p>
+    </footer>
+</body>
+</html>
